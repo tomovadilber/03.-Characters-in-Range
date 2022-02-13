@@ -1,0 +1,45 @@
+using System;
+using System.Linq;
+using System.Text;
+
+namespace ArraysEx_
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Practice();
+
+        }
+
+        static void Practice()
+        {
+
+
+            char first = char.Parse(Console.ReadLine());
+            char second = char.Parse(Console.ReadLine());
+
+            char current = first;
+
+            int start = (int)first;
+            int end = (int)second;
+
+            int result = 0;
+
+            if (start > end)
+            {
+                start = (int)second;
+                end = (int)first;
+            }
+
+            for (int i = start; i < end -1; i++)
+            {
+                result = i + 1;
+                current = (char)result;
+                Console.Write($"{current} ");
+            }
+        }
+
+    }
+}
+
